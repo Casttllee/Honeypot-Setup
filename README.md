@@ -1,4 +1,4 @@
-# Honeypot-Setup
+# Spiderfoot (OSINT)
 
 ## Objective
 
