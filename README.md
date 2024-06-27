@@ -6,17 +6,18 @@ The primary objective of this lab is to equip participants with the knowledge an
 
 ### Skills Learned
 
-- Advanced understanding of SIEM concepts and practical application.
-- Proficiency in analyzing and interpreting network logs.
-- Ability to generate and recognize attack signatures and patterns.
-- Enhanced knowledge of network protocols and security vulnerabilities.
-- Development of critical thinking and problem-solving skills in cybersecurity.
+- Cybersecurity Analysis: Understanding of cybersecurity tools and techniques for reconnaissance and threat assessment.
+- Vulnerability Assessment: Identifying potential vulnerabilities through analysis of open ports and software versions.
+- Correlation Analysis: Ability to correlate different data points to derive meaningful insights.
+- Report Writing: Communicating findings effectively through written reports or summaries.
+- API Integration: Experience in integrating and using APIs, such as AbuseIPDB, for obtaining data.
 
 ### Tools Used
 
-- Security Information and Event Management (SIEM) system for log ingestion and analysis.
-- Network analysis tools (such as Wireshark) for capturing and examining network traffic.
-- Telemetry generation tools to create realistic network traffic and attack scenarios.
+- Spiderfoot: Used for automated reconnaissance and information gathering.
+- Python 3 and pip: Used for managing Python packages and dependencies.
+- Text Editor: Used for modifying configuration files, writing scripts, or editing command outputs.
+- Linux Terminal: Utilized for running commands and managing system configurations.
 
 ## Steps
 
@@ -65,15 +66,15 @@ The primary objective of this lab is to equip participants with the knowledge an
   This screenshot provides an overview of the various data types associated with the analysis, including IP addresses, domain names, and related metadata.
 *Ref 12*
 ![scan 2 open port 11](https://github.com/Casttllee/Spiderfoot-OSINT-/assets/137667912/4a2f3cfe-c47a-4751-993e-6f8173cd50ae)
-  Next I headed to correlations which showed "Software version revealed on open port SSH". Taking a look at the correlation I infered that the IP address had port 22 open.
+  After completing the initial scan, I proceeded to explore the correlations section. There, I found a correlation titled 'Software version revealed on open port SSH'. Upon examining this correlation, I inferred that the IP address in question had port 22 open, based on the information provided.
 
 *Ref 13*
 ![browse second scan 12](https://github.com/Casttllee/Spiderfoot-OSINT-/assets/137667912/e4acb1d4-8529-4de1-85f2-4e08ed578ed4)
-  Next I proceded to Browse which contains country name, BGP, email address, which provides additional information. Blakclisted IP and open ports were shown as well.
+  After exploring the correlations, I proceeded to the Browse section. In this section, I found detailed information such as country names associated with the IP addresses, BGP (Border Gateway Protocol) data, and email addresses. Additionally, the section provided insights into blacklisted IPs and listed open ports, offering a comprehensive view of the analyzed data.
 
 *Ref 14*
 ![ip visual map second scan 13](https://github.com/Casttllee/Spiderfoot-OSINT-/assets/137667912/0057ab1b-b8c9-488f-9997-a7fe4aca91de)
-  The last step I performed was investigate the IP address graph. This graph shows all the entities that are related to the IP address (red dot). One data point shows an Email address that relate to three other data points and IP network range and to another IP network range.
-
+  The final step I took was to investigate the IP address graph. This graph visually represents all entities related to the IP address (denoted by a red dot). Notably, one data point shows an email address connected to three other data points, as well as connections to two different IP network ranges.
+  
 ## Conclusion
-
+  In conclusion, this project involved a comprehensive analysis using Spiderfoot on an IP address obtained from AbuseIPDB. Through multiple scans and investigations, I gained insights into various data types including IP addresses, domain names, and associated metadata. The correlations section highlighted significant findings such as open ports and software versions, providing insights into potential vulnerabilities. The Browse section further enriched the analysis with details on country names, BGP data, email addresses, and blacklisted IPs. Finally, the IP address graph visually depicted the intricate relationships among entities, underscoring the interconnected nature of digital footprints. Overall, this project demonstrated the effectiveness of Spiderfoot in conducting thorough reconnaissance and gathering actionable intelligence for cybersecurity and investigative purposes.
